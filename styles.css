@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+body {
+     background: linear-gradient(to right, #054c76, #0c192a,#0c192a);
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+.card h2 {
+    /* Внутренний отступ для заголовка h2 */
+    margin: 5px;
+}
+.card1{
+    height: 200px;
+}
+.card2{
+    display: flex;
+    flex-basis: 220px;
+    height: 210px;
+}
+.card3{
+    height: 200px;
+}
+.price {
+    /* Размер шрифта цены */
+    font-size: 20px;
+    /* Жирное начертание для цены */
+    font-weight: 600;
+}
+.button1{
+    position: relative;
+    margin: -60px;
+     background: linear-gradient(135deg, #e0f7fa, #80deea);
+  color: #00363a; /* тёмно-бирюзовый текст */
+  border: 3px solid rgba(0, 54, 58, 0.5); /* мягкая граница */
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(128, 222, 234, 0.4); /* лёгкое свечение */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button2{
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+    color: #fff;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(255, 100, 0, 0.4)
+}
+.button3{
+    margin:-60px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+   color: #f8f8f8;
+   border: 3px solid rgba(255, 215, 0, 0.5); /* золотистая рамка */
+   border-radius: 18px;
+   box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+}
+.button1,.button2,.button3{
+    position: relative; /* если нужен z-index или смещение */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 15%;
+}
+
+.button1:hover,.button2:hover,.button3:hover {
+    /* Изменение цвета фона кнопки при наведении */
+    filter: brightness(0.7);
+    z-index: 3;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+ul {
+    /* Удаление маркеров списка */
+    list-style: none;
+}
+
+li {
+    /* Внешний отступ элементов списка */
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+    body {
+        /* Изменение направления отображения элементов при ширине экрана до 768px */
+        flex-direction: column;
+        /* Выравнивание элементов по центру при изменении направления */
+        align-items: center;
+    }
+    .button1{
+        margin: -20px;
+    }
+    .button2{
+        z-index: 0;
+        width: 250px;
+        height: 200px;
+    }
+    .button3{
+        margin: 20px;
+        width: 260px;
+        height: 200px;
+    }
+}
+@media (min-width:1050px){
+    *{
+        font-size: 30px;
+    }
+    .button1{
+        height: 390px;
+        width: 350px;
+    }
+    .button2{
+        height: 410px;
+        width: 370px;
+    }
+    .button3{
+        height: 410px;
+        width: 370px;
+    }
+}
